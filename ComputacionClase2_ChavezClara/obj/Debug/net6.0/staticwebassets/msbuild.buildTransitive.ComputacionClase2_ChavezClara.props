@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ComputacionClase2_ChavezClara.props" />
+</Project>
