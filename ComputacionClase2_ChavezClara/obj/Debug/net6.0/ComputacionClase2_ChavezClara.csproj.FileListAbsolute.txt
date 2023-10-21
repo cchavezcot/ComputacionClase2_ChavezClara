@@ -77,3 +77,5 @@ D:\Computacion_Proyectos\ComputacionClase2_ChavezClara\ComputacionClase2_ChavezC
 D:\Computacion_Proyectos\ComputacionClase2_ChavezClara\ComputacionClase2_ChavezClara\obj\Debug\net6.0\ComputacionClase2_ChavezClara.pdb
 D:\Computacion_Proyectos\ComputacionClase2_ChavezClara\ComputacionClase2_ChavezClara\obj\Debug\net6.0\ComputacionClase2_ChavezClara.genruntimeconfig.cache
 D:\Computacion_Proyectos\ComputacionClase2_ChavezClara\ComputacionClase2_ChavezClara\obj\Debug\net6.0\ref\ComputacionClase2_ChavezClara.dll
+D:\Computacion_Proyectos\ComputacionClase2_ChavezClara\ComputacionClase2_ChavezClara\bin\Debug\net6.0\AutoMapper.dll
+D:\Computacion_Proyectos\ComputacionClase2_ChavezClara\ComputacionClase2_ChavezClara\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

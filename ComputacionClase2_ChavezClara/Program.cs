@@ -1,7 +1,7 @@
 using ComputacionClase2_ChavezClara.Model;
-using Microsoft.AspNetCore.Mvc;
+using ComputacionClase2_ChavezClara.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +20,13 @@ builder.Services.AddDbContext<ModelDBContext>(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(Assembly.Load("ComputacionClase2_ChavezClara"));
+
+//Agregamos los controladores
+builder.Services.AddScoped<IEditorialService, EditorialService>();
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IBranchService,BranchService>();
+builder.Services.AddScoped<IInventoryService, InventoryService>();
 
 var app = builder.Build();
 
@@ -27,7 +34,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetService<ModelDBContext>();
-    context.Database.EnsureDeleted(); //Eliminar Base de datos. Hasta que veamos migraciones
+    //context.Database.EnsureDeleted(); //Eliminar Base de datos. Hasta que veamos migraciones
     context.Database.EnsureCreated();
 }
 

@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "+/xKdABmQoLUuzHr7b6IwyyjZt6fHialccC18v16t7ikHe6muaBgUwDGVPELbApWsQv4PuR535uvJs8urNfIug==",
+  "dgSpecHash": "hJSPb0dOP4AhBxBD+hRiD33Q+FIu7syilbqG8AKorqDrlA0s5Deo7Db3TQFkfU7RXPswhepRxVPaFFqRbB6Uzg==",
   "success": true,
   "projectFilePath": "D:\\Computacion_Proyectos\\ComputacionClase2_ChavezClara\\ComputacionClase2_ChavezClara\\ComputacionClase2_ChavezClara.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\clara\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\clara\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\clara\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\clara\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
