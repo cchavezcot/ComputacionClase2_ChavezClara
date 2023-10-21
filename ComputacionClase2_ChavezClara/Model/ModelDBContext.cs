@@ -10,9 +10,9 @@ namespace ComputacionClase2_ChavezClara.Model
 
         public DbSet<Book> Books { get; set; }
 
-        public DbSet<Editorial> Branches { get; set; }
+        public DbSet<Branch> Branches { get; set; }
 
-        public DbSet<Book> Inventories { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -187,7 +187,7 @@ namespace ComputacionClase2_ChavezClara.Model
                                         .IsRequired(false)
                                         .HasMaxLength(150);
 
-                //HasData permite el llenado de la data inicial en la tabla
+                              
                 Branch.HasData(branchesInit);
             });
 
@@ -199,12 +199,16 @@ namespace ComputacionClase2_ChavezClara.Model
             {
                 Id = 1,
                 Existence = 28,
+                BookId = 2,
+                BranchId = 2,
             });
 
             inventoriesInit.Add(new Inventory()
             {
                 Id = 2,
                 Existence = 15,
+                BookId=1,
+                BranchId = 1,
             });
 
             modelBuilder.Entity<Inventory>(Iventory =>
@@ -212,6 +216,10 @@ namespace ComputacionClase2_ChavezClara.Model
                 Iventory.ToTable("Inventory");
                 Iventory.HasKey(p => p.Id);
                 Iventory.Property(p => p.Existence)
+                                        .IsRequired();
+                Iventory.Property(p => p.BookId)
+                                        .IsRequired();
+                Iventory.Property(p => p.BranchId)
                                         .IsRequired();
 
                 Iventory.HasData(inventoriesInit);

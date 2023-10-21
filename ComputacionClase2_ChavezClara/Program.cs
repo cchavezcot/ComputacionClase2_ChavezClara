@@ -57,12 +57,12 @@ app.MapGet("/api/book", ([FromServices] ModelDBContext dbcontext) =>
 
 app.MapGet("/api/branch", ([FromServices] ModelDBContext dbcontext) =>
 {
-    return Results.Ok(dbcontext.Inventories.ToList());
+    return Results.Ok(dbcontext.Branches.ToList());
 });
 
 app.MapGet("/api/inventory", ([FromServices] ModelDBContext dbcontext) =>
 {
-    return Results.Ok(dbcontext.Branches.ToList());
+    return Results.Ok(dbcontext.Inventories.ToList());
 });
 
 app.Run();
