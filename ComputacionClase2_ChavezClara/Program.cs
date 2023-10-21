@@ -44,25 +44,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//Creacion de metodos de listar para validar data.
-app.MapGet("/api/editorial", ([FromServices] ModelDBContext dbcontext) =>
-{
-    return Results.Ok(dbcontext.Editorials.ToList());
-});
-
-app.MapGet("/api/book", ([FromServices] ModelDBContext dbcontext) =>
-{
-    return Results.Ok(dbcontext.Books.ToList());
-});
-
-app.MapGet("/api/branch", ([FromServices] ModelDBContext dbcontext) =>
-{
-    return Results.Ok(dbcontext.Branches.ToList());
-});
-
-app.MapGet("/api/inventory", ([FromServices] ModelDBContext dbcontext) =>
-{
-    return Results.Ok(dbcontext.Inventories.ToList());
-});
-
 app.Run();
