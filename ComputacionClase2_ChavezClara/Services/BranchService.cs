@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ComputacionClase2_ChavezClara.Dtos;
 using ComputacionClase2_ChavezClara.Model;
+using FluentValidation;
 
 namespace ComputacionClase2_ChavezClara.Services
 {
@@ -10,10 +11,13 @@ namespace ComputacionClase2_ChavezClara.Services
 
         private readonly IMapper _mapper;
 
-        public BranchService(ModelDBContext dbContext, IMapper mapper)
+        private readonly IValidator<SaveBranchDto> _validator;
+
+        public BranchService(ModelDBContext dbContext, IMapper mapper, IValidator<SaveBranchDto> validator)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+            _validator = validator;
         }
 
         public IList<BranchDto> Get()
@@ -24,6 +28,8 @@ namespace ComputacionClase2_ChavezClara.Services
 
         public void Save(SaveBranchDto dto)
         {
+            _validator.ValidateAndThrow(dto);
+
             var branch = _mapper.Map<Branch>(dto);
             _dbContext.Branches.Add(branch);
             _dbContext.SaveChanges();
@@ -31,6 +37,8 @@ namespace ComputacionClase2_ChavezClara.Services
 
         public void Update(int id, SaveBranchDto dto)
         {
+            _validator.ValidateAndThrow(dto);
+
             var currentBranch = _dbContext.Branches.Find(id);
             if (currentBranch != null && currentBranch.Id == dto.Id)
             {

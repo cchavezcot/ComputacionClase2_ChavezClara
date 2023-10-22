@@ -1,5 +1,6 @@
 using ComputacionClase2_ChavezClara.Model;
 using ComputacionClase2_ChavezClara.Services;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -21,6 +22,7 @@ builder.Services.AddDbContext<ModelDBContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(Assembly.Load("ComputacionClase2_ChavezClara"));
+builder.Services.AddValidatorsFromAssembly(Assembly.Load("ComputacionClase2_ChavezClara"));
 
 //Agregamos los controladores
 builder.Services.AddScoped<IEditorialService, EditorialService>();

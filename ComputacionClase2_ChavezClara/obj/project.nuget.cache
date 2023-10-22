@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hJSPb0dOP4AhBxBD+hRiD33Q+FIu7syilbqG8AKorqDrlA0s5Deo7Db3TQFkfU7RXPswhepRxVPaFFqRbB6Uzg==",
+  "dgSpecHash": "xrVwDIvjchhV/v9REruZ60H91iuGRmgnmQnZMa6yCoZuR4PMpzQdJ7rmdPMJt6NSKaeUzh2IAQ77lwKW8XPD5A==",
   "success": true,
   "projectFilePath": "D:\\Computacion_Proyectos\\ComputacionClase2_ChavezClara\\ComputacionClase2_ChavezClara\\ComputacionClase2_ChavezClara.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\clara\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\clara\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\clara\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\clara\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

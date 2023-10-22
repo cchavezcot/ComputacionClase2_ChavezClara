@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ComputacionClase2_ChavezClara.Dtos;
 using ComputacionClase2_ChavezClara.Model;
+using FluentValidation;
 
 namespace ComputacionClase2_ChavezClara.Services
 {
@@ -10,10 +11,13 @@ namespace ComputacionClase2_ChavezClara.Services
 
         private readonly IMapper _mapper;
 
-        public EditorialService(ModelDBContext dbContext, IMapper mapper)
+        private readonly IValidator<SaveEditorialDto> _validator;
+
+        public EditorialService(ModelDBContext dbContext, IMapper mapper, IValidator<SaveEditorialDto> validator)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+            _validator = validator;
         }
 
         public IList<EditorialDto> Get()
@@ -24,6 +28,8 @@ namespace ComputacionClase2_ChavezClara.Services
 
         public void Save(SaveEditorialDto dto)
         {
+            _validator.ValidateAndThrow(dto);
+
             var editorial = _mapper.Map<Editorial>(dto);
             _dbContext.Editorials.Add(editorial);
             _dbContext.SaveChanges();
@@ -31,6 +37,8 @@ namespace ComputacionClase2_ChavezClara.Services
 
         public void Update(int id, SaveEditorialDto dto)
         {
+            _validator.ValidateAndThrow(dto);
+
             var currentEditorial = _dbContext.Editorials.Find(id);
 
             if (currentEditorial != null && currentEditorial.Id == dto.Id)

@@ -85,7 +85,7 @@ namespace ComputacionClase2_ChavezClara.Model
             booksInit.Add(new Book()
             {
                 Id = 1,
-                ISBN = "54545adsasd541215",
+                ISBN = "54545adsasd54",
                 Title = "Estructura e interpretación de programas informáticos",
                 Autor = "Harold Abelson",
                 Year = 2005,
@@ -97,7 +97,7 @@ namespace ComputacionClase2_ChavezClara.Model
             booksInit.Add(new Book()
             {
                 Id = 2,
-                ISBN = "6465123321asdasd321586",
+                ISBN = "54545adsasd89",
                 Title = "A Veces Mamá Tiene Truenos en la Cabeza",
                 Autor = "Harold Abelson",
                 Year = 2021,
@@ -113,10 +113,10 @@ namespace ComputacionClase2_ChavezClara.Model
 
                 Book.Property(p => p.ISBN)
                                         .IsRequired()
-                                        .HasMaxLength(30);
+                                        .HasMaxLength(13);
                 Book.Property(p => p.Title)
                                         .IsRequired()
-                                        .HasMaxLength(80);
+                                        .HasMaxLength(100);
                 Book.Property(p => p.Autor)
                                         .IsRequired()
                                         .HasMaxLength(100);
