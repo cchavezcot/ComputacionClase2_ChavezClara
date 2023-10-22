@@ -10,10 +10,10 @@ namespace ComputacionClase2_ChavezClara.Validator
             RuleFor(x => x.Existence)
                             .NotEmpty()
                             .NotNull();
-            RuleFor(x => x.BookId)
+            RuleFor(x => x.BranchId)
                             .NotEmpty()
                             .NotNull();
-            RuleFor(x => x.BranchId)
+            RuleFor(x => x.BookId)
                             .NotEmpty()
                             .NotNull();
         }
